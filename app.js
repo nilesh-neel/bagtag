@@ -77,6 +77,7 @@ $(function() {
 
 
     Quagga.onProcessed(function(result) {
+        alert('onProcessed start');
         var drawingCtx = Quagga.canvas.ctx.overlay,
             drawingCanvas = Quagga.canvas.dom.overlay,
             area;
