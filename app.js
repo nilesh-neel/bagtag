@@ -19,7 +19,7 @@ $(function() {
                 code = order_by_occurance(last_result)[0];
                 last_result = [];
                 Quagga.stop();
-
+                alert(code);
                 document.querySelector('result').innerHTML = code;
             }
             // var $node = null,
@@ -45,7 +45,11 @@ $(function() {
             readers: ['i2of5', '2of5']
         }
     }, function(err) {
-        if (err) { console.log('Error Occured...  ' + err); return; }
+        if (err) {
+            console.log('Error Occured...  ' + err);
+            alert(err);
+            return;
+        }
         Quagga.initialized = true;
         Quagga.start();
     });
