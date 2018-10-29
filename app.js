@@ -35,6 +35,7 @@ $(function() {
 
 
     Quagga.init({
+        alert('Quagga Intit Call');
         inputStream: {
             name: 'Live',
             type: 'LiveStream',
