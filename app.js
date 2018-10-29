@@ -35,7 +35,6 @@ $(function() {
 
 
     Quagga.init({
-        alert('Quagga Intit Call');
         inputStream: {
             name: 'Live',
             type: 'LiveStream',
@@ -74,7 +73,7 @@ $(function() {
             width: right - left,
             height: bottom - top
         };
-    }
+    };
 
 
     Quagga.onProcessed(function(result) {
@@ -101,13 +100,10 @@ $(function() {
                 Quagga.ImageDebug.drawPath(result.line, { x: 'x', y: 'y' }, drawingCtx, { color: 'red', lineWidth: 3 });
             }
 
-            if (App.state.inputStream.area) {
-                area = calculateRectFromArea(drawingCanvas, App.state.inputStream.area);
-                drawingCtx.strokeStyle = "#0F0";
-                drawingCtx.strokeRect(area.x, area.y, area.width, area.height);
-            }
+            area = calculateRectFromArea(drawingCanvas, 600);
+            drawingCtx.strokeStyle = "#0F0";
+            drawingCtx.strokeRect(area.x, area.y, area.width, area.height);
         }
     });
-
 
 });
